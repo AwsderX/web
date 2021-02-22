@@ -1,0 +1,174 @@
+body {
+  background-color: #000000;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display:block;
+  margin:auto;
+  height: 250px;
+}
+
+input {
+  padding: 2.5em;
+}
+
+.button {
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+
+.button:hover {
+  background-color: rgb(109, 0, 0);
+}
+
+.lateral ul {
+  display: flex;
+  background-color: rgb(255, 0, 0);
+  justify-content: space-around;
+}
+
+.lateral a {
+  display: block;
+  padding: 1em;
+  background-color: rgb(216, 0, 0);
+  color: white;
+}
+
+.lateral a:hover {
+  background-color: rgb(109, 0, 0);
+}
+
+.text {
+  margin: 3em;
+  padding: 3em;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  max-width: 30em;
+}
+
+.upright {
+  padding:100px 0px; 
+  block-size: auto;
+  width: fit-content;
+}
+
+.upright ul {
+  background-color: rgb(255, 0, 0);
+  padding: 0.5em;
+}
+
+.upright a {
+  display: block;
+  padding: 1em;
+  margin: 0.5em;
+  background-color: rgb(216, 0, 0);
+  color: white;
+}
+
+.upright a:hover {
+  background-color: rgb(109, 0, 0);
+}
+
+.me {
+  position: fixed;
+  margin: -200px 0;
+  right: 0%;
+  background-color: rgb(255, 0, 0);
+  padding: 1em;
+}
+
+.me li {
+  margin-bottom: 0.5em;
+  padding: 10px 5px;
+  background-color: rgb(216, 0, 0);
+}
+
+.me a {
+  color: white;
+}
+
+.me a:hover {
+  color: rgb(0, 0, 0);
+}
+
+nav.level {
+  background: rgb(255, 0, 0);
+}
+
+nav.level ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav.level ul {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav.level a {
+  text-decoration: none;
+  display: block;
+}
+
+.topmenu > li {
+  float: left;
+  position: relative;
+}
+
+.topmenu > li > a {  
+  padding: 20px 30px;
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.topmenu > li > a.active {
+  color: #ffffff;
+}
+
+.topmenu a:hover {
+  color: #ffffff;
+  background-color: rgb(216, 0, 0);
+}
+
+.submenu {
+  position: absolute;
+  min-width: 217px;
+  background: white;
+  transform-origin: 0% 0%;
+  transform: rotateX(-90deg);
+}
+
+.submenu li {
+  position: relative;
+}
+.submenu li a {
+  color: #000000;
+  padding: 15px 20px;
+  font-size: 15px;
+}
+.submenu .submenu {
+  position: absolute;
+  left: 100%;
+  top: -1px;
+}
+nav li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+
+}
