@@ -1,0 +1,13 @@
+svg path {
+    stroke:inherit;
+    stroke-width:inherit;
+    fill:inherit;
+}
+.circle svg:hover{
+    stroke: red; 
+    fill: red;
+}
+.circle:hover { 
+    stroke: red; 
+    fill: red; 
+}
