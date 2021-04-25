@@ -20,15 +20,46 @@
       .name {
         font-size: 250px;
       }
+      #rod {
+        position: relative;
+        margin-top: 50px;
+        margin-left: 150px;
+        width: 2px;
+        height: 150px;
+        border-radius: 5px;
+        transform-origin: 50% 0%;
+        transform: rotate(60deg);
+        background-color: green;
+      }
+
+      #pivot {
+        position: absolute;
+        top: -5px;
+        left: -3px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: black;
+      }
+
+      #ball {
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: orange;
+      }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
   </head>
 
   <body>
-       
     <div class="container mt-5 mb-5">
       <h1>CSS библиотека Bootstrap и JS библиотека jQuery</h1>
-	   <button
+      <button
         type="submit"
         class="btn btn-outline-danger btn-lg btn-block"
         data-toggle="modal"
@@ -38,64 +69,88 @@
       </button>
       <h5>Классы в World of Warcraft.</h5>
       <h2 class="rozovyu toggleClass">
-      <span class="name">Нажмите</span>
+        <span class="name">Нажмите</span>
       </h2>
       <div class="row">
         <div class="col-sm-12 col-lg-6">
           <p class="text-justify">
-            <span class="badge badge-danger">Воин</span> - Воины тщательно готовятся к бою, а с противником сражаются лицом к лицу, принимая все удары на свои доспехи. 
-			Они пользуются различными боевыми тактиками и применяют разнообразное оружие, чтобы защитить своих более хрупких союзников. 
-			Для максимальной эффективности воины должны контролировать свою ярость — ту силу, что питает их наиболее опасные атаки.
+            <span class="badge badge-danger">Воин</span> - Воины тщательно
+            готовятся к бою, а с противником сражаются лицом к лицу, принимая
+            все удары на свои доспехи. Они пользуются различными боевыми
+            тактиками и применяют разнообразное оружие, чтобы защитить своих
+            более хрупких союзников. Для максимальной эффективности воины должны
+            контролировать свою ярость — ту силу, что питает их наиболее опасные
+            атаки.
           </p>
         </div>
         <div class="col-sm-12 col-lg-6">
           <p class="text-justify">
-            <span class="badge badge-danger">Охотник</span> - Охотники бьют врага на расстоянии или в ближнем бою, приказывая питомцам атаковать,
-			пока сами натягивают тетиву, заряжают ружье или разят древковым оружием. 
-			Их оружие действенно и вблизи, и издалека. 
-			Кроме того, охотники очень подвижны. Они могут уклониться от атаки или задержать противника, контролируя поле боя.
+            <span class="badge badge-danger">Охотник</span> - Охотники бьют
+            врага на расстоянии или в ближнем бою, приказывая питомцам
+            атаковать, пока сами натягивают тетиву, заряжают ружье или разят
+            древковым оружием. Их оружие действенно и вблизи, и издалека. Кроме
+            того, охотники очень подвижны. Они могут уклониться от атаки или
+            задержать противника, контролируя поле боя.
           </p>
         </div>
         <div class="col-sm-12 col-lg-6">
           <p class="text-justify">
-            <span class="badge badge-warning">Жрец</span> — Жрецы могут задействовать мощную целительную магию, чтобы спасти себя и своих спутников.
-			Им подвластны и сильные атакующие заклинания, но физическая слабость и отсутствие прочных доспехов заставляют жрецов бояться сближения с противником.
-			Опытные жрецы используют боевые и контролирующие способности, не допуская гибели членов отряда.
-          </p>
-        </div>
-		        <div class="col-sm-12 col-lg-6">
-          <p class="text-justify">
-            <span class="badge badge-warning">Маг</span> — Маги уничтожают врагов тайными заклинаниями. 
-			Несмотря на магическую силу, маги хрупки, не носят тяжелых доспехов, поэтому уязвимы в ближнем бою.
-			Умные маги при помощи заклинаний удерживают врага на расстоянии или вовсе обездвиживают его.
-          </p>
-        </div>
-		        <div class="col-sm-12 col-lg-6">
-          <p class="text-justify">
-            <span class="badge badge-success">Чернокнижник</span> — Чернокнижники уничтожают ослабленного противника, сочетая увечащие болезни и темную магию. 
-			Находясь под защитой своих питомцев, чернокнижники разят врага на расстоянии. 
-			Физически слабые колдуны не могут носить тяжелую броню, поэтому подставляют под вражеские удары своих слуг.
-          </p>
-        </div>
-		        <div class="col-sm-12 col-lg-6">
-          <p class="text-justify">
-            <span class="badge badge-success">Охотник на демонов</span> — Охотники на демонов не пользуются тяжелой броней, вместо этого полагаясь на скорость,
-			которая дает им возможность стремительно приближаться к противнику и наносить ему урон одноручным оружием. 
-			Однако иллидари не стоит забывать о том, чтобы использовать свою ловкость и в защитных целях, обеспечивая себе благоприятный исход битвы.
-          </p>
-        </div>
-		        <div class="col-sm-12 col-lg-6">
-          <p class="text-justify">
-            <span class="badge badge-primary">Разбойник</span> — Разбойники часто нападают из теней, начиная бой комбинацией свирепых ударов.
-			В затяжном бою они изматывают врага тщательно продуманной серией атак, прежде чем нанести решающий удар. 
-			Разбойнику следует внимательно отнестись к выбору противника, чтобы оптимально использовать тактику,
-			и не упустить момент, когда надо спрятаться или бежать, если ситуация складывается не в их пользу.
+            <span class="badge badge-warning">Жрец</span> — Жрецы могут
+            задействовать мощную целительную магию, чтобы спасти себя и своих
+            спутников. Им подвластны и сильные атакующие заклинания, но
+            физическая слабость и отсутствие прочных доспехов заставляют жрецов
+            бояться сближения с противником. Опытные жрецы используют боевые и
+            контролирующие способности, не допуская гибели членов отряда.
           </p>
         </div>
         <div class="col-sm-12 col-lg-6">
           <p class="text-justify">
-            <span class="badge badge-primary">Шаман</span> — В бою шаман ставит на землю контролирующие и наносящие урон тотемы, чтобы помочь союзникам и ослабить противника. 
-			Шаманы могут как вступать в ближний бой, так и атаковать с расстояния. Мудрый шаман всегда старается учитывать сильные и слабые стороны врага.
+            <span class="badge badge-warning">Маг</span> — Маги уничтожают
+            врагов тайными заклинаниями. Несмотря на магическую силу, маги
+            хрупки, не носят тяжелых доспехов, поэтому уязвимы в ближнем бою.
+            Умные маги при помощи заклинаний удерживают врага на расстоянии или
+            вовсе обездвиживают его.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="text-justify">
+            <span class="badge badge-success">Чернокнижник</span> —
+            Чернокнижники уничтожают ослабленного противника, сочетая увечащие
+            болезни и темную магию. Находясь под защитой своих питомцев,
+            чернокнижники разят врага на расстоянии. Физически слабые колдуны не
+            могут носить тяжелую броню, поэтому подставляют под вражеские удары
+            своих слуг.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="text-justify">
+            <span class="badge badge-success">Охотник на демонов</span> —
+            Охотники на демонов не пользуются тяжелой броней, вместо этого
+            полагаясь на скорость, которая дает им возможность стремительно
+            приближаться к противнику и наносить ему урон одноручным оружием.
+            Однако иллидари не стоит забывать о том, чтобы использовать свою
+            ловкость и в защитных целях, обеспечивая себе благоприятный исход
+            битвы.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="text-justify">
+            <span class="badge badge-primary">Разбойник</span> — Разбойники
+            часто нападают из теней, начиная бой комбинацией свирепых ударов. В
+            затяжном бою они изматывают врага тщательно продуманной серией атак,
+            прежде чем нанести решающий удар. Разбойнику следует внимательно
+            отнестись к выбору противника, чтобы оптимально использовать
+            тактику, и не упустить момент, когда надо спрятаться или бежать,
+            если ситуация складывается не в их пользу.
+          </p>
+        </div>
+        <div class="col-sm-12 col-lg-6">
+          <p class="text-justify">
+            <span class="badge badge-primary">Шаман</span> — В бою шаман ставит
+            на землю контролирующие и наносящие урон тотемы, чтобы помочь
+            союзникам и ослабить противника. Шаманы могут как вступать в ближний
+            бой, так и атаковать с расстояния. Мудрый шаман всегда старается
+            учитывать сильные и слабые стороны врага.
           </p>
         </div>
       </div>
@@ -114,10 +169,10 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-		  <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-		  <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-		  <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-		  <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -135,14 +190,14 @@
           <div class="carousel-item">
             <img class="d-block w-100" src="img/5.png" alt="5" />
           </div>
-		            <div class="carousel-item">
+          <div class="carousel-item">
             <img class="d-block w-100" src="img/6.png" alt="6" />
           </div>
-		            
-		            <div class="carousel-item">
+
+          <div class="carousel-item">
             <img class="d-block w-100" src="img/7.png" alt="7" />
           </div>
-		            <div class="carousel-item">
+          <div class="carousel-item">
             <img class="d-block w-100" src="img/8.png" alt="8" />
           </div>
         </div>
@@ -170,6 +225,11 @@
         Ctrl+Shift+I. После чего имеется возможность управлять содержимим сайта,
         отслеждивать http запросы, а также работа с консолью браузера
       </span>
+    </div>
+
+    <div id="rod">
+      <div id="pivot"></div>
+      <div id="ball"></div>
     </div>
 
     <div
@@ -209,7 +269,19 @@
         });
     </script>
 
+    <script>
+      let animation = anime({
+        targets: "#rod",
+        rotate: [60, -60],
+        duration: 3000,
+        easing: "easeInOutSine",
+        direction: "alternate",
+        loop: true,
+      });
+    </script>
+
     <!-- JS, Popper.js, and jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
