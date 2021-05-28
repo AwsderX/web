@@ -1,0 +1,20 @@
+@media print {
+  .see-link,
+  .img-block {
+    display: block !important;
+  }
+  .img-one {
+    page-break-after: always;
+  }
+  .carousel,
+  .btn {
+    display: none !important;
+  }
+  .body{
+    color: black;
+  } 
+}
+
+@page :first {
+  margin: 1cm;
+}
