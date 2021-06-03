@@ -18,6 +18,8 @@ main {
     top: 0;
     left: 0;
     z-index: 0;
+	overflow:hidden;
+overflow-y:hidden;
 }
 img{
 	width: 40px;
@@ -110,15 +112,19 @@ div:hover{
 
 .santa {
   position: absolute;
-  left:37%;
-  animation: bounce 3s linear infinite;
+  bottom:65%;
+  left:29%;
+  animation: santa_b 20s ease-in-out;
 }
-@keyframes bounce {
-  0% { bottom: 90%; }
-  45% { bottom: 58%; }
-  50% { bottom: 58%; }
-  95% { bottom: 90%; }
-  100% { bottom:90%; };
+@keyframes santa_b {
+  0% { bottom: 90%;}
+  10% {opacity:100%}
+  13% {opacity: 0%;}
+  15% { bottom: 55%; }
+  70% { bottom: 55%; }
+  91% {opacity: 0%;}
+  94% {opacity :100%;}
+  100% { bottom:65%; };
   }
 
 
