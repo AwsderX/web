@@ -16,10 +16,12 @@
         font-size: 24px;
 		height: 297mm;
         width: 210mm;
+		color: black !important;
     }
 	    .see-link,
     .img-block {
         display: block !important;
+		page-break-inside: avoid;
     }
 	.name{
 		color: black;
@@ -27,10 +29,13 @@
 	}
 	a:after {
     content: " [" attr(href) "]" !important;
+	 background: transparent !important;
 	}
 	a,button{
 	color: black !important;
 	}
+		.noprint 
+{ display: none; }
   
 }
 
@@ -51,37 +56,7 @@
       .name {
         font-size: 250px;
       }
-      #rod {
-        position: relative;
-        margin-top: 50px;
-        margin-left: 150px;
-        width: 2px;
-        height: 150px;
-        border-radius: 5px;
-        transform-origin: 50% 0%;
-        transform: rotate(60deg);
-        background-color: green;
-      }
 
-      #pivot {
-        position: absolute;
-        top: -5px;
-        left: -3px;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: black;
-      }
-
-      #ball {
-        position: absolute;
-        bottom: -10px;
-        left: -10px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: orange;
-      }
     </style>
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
@@ -99,7 +74,7 @@
       </button>
       <h5>Классы в World of Warcraft.</h5>
       <h2 class="rozovyu toggleClass">
-        <span class="name">Нажмите</span>
+        <span class="name noprint">Нажмите</span>
       </h2>
       <div class="row">
         <div class="col-sm-12 col-lg-6">
@@ -174,15 +149,7 @@
             если ситуация складывается не в их пользу.
           </p>
         </div>
-        <div class="col-sm-12 col-lg-6">
-          <p class="text-justify">
-            <span class="badge badge-warning">Шаман</span> — В бою шаман ставит
-            на землю контролирующие и наносящие урон тотемы, чтобы помочь
-            союзникам и ослабить противника. Шаманы могут как вступать в ближний
-            бой, так и атаковать с расстояния. Мудрый шаман всегда старается
-            учитывать сильные и слабые стороны врага.
-          </p>
-        </div>
+
       </div>
 
       <div>
@@ -195,39 +162,6 @@
       </span>
     </div>
 
-    <div id="rod">
-      <div id="pivot"></div>
-      <div id="ball"></div>
-    </div>
-
-    <div
-      class="modal"
-      id="modal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="modalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Уведомление</h5>
-          </div>
-          <div class="modal-body">
-            <p>
-              <a href="https://github.com/AwsderX/web"
-                >https://github.com/AwsderX/web</a
-              >
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-dark" data-dismiss="modal">
-              Закрыть
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script>
       $("h2")
