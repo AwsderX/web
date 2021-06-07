@@ -85,44 +85,43 @@ grid-template-columns: auto auto auto;
 .grid4__container {
     display: grid;
 	margin-top: 20px;
-	justify-content: flex-start;
+	justify-content: center;
     grid-auto-flow: column;
 	column-gap: 10px;
 	text-align:center;
 }
 
 .grid5__container {
-	        width: 1200px;
-        height: 300px;
-	margin-top: 20px;
-    display: flex;
-	    flex-wrap: wrap;
-    align-content: flex-end;
+display: inline-grid; 
+grid: auto / repeat(4, 100px);  
+align-content: end;
+width: 1200px;
+height: 300px;
+margin-top: 20px;
 font-size:20px;
-	
+border: 1px solid rgb(0, 0, 0);
 }
 .grid5__container div {
-	height: 70px;
-	width:300px;
-	text-align:center;
-	
+	height: 100px;
+	text-align: center;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .grid6__container {
-	        width: 1200px;
-        height: 300px;
-	margin-top: 20px;
-    display: flex;
-	    flex-wrap: wrap;
-   place-items: flex-end;
+display: grid;
+grid: auto / repeat(4, 200px);
+width: 1200px;
+height: 300px;
+margin-top: 20px;
+border: 1px solid rgb(0, 0, 0);
+place-items: start;
 font-size:20px;
 	
 }
 .grid6__container div {
 	height: 50px;
-	width:200px;
 	text-align:center;
-	
+	border: 1px solid rgb(0, 0, 0);
 }
 body {
     display: grid;
