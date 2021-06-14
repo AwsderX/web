@@ -10,7 +10,7 @@
   <style>
     @media print {
       body {
-        font-size: 24px;
+        font-size: 1em;
         height: 297mm;
         width: 210mm;
       }
@@ -37,7 +37,7 @@
     }
 
 	.btn1{
-	font-size: 10px;
+	font-size: 0.5em;
 	}
     body {
       color: #000;
@@ -61,7 +61,7 @@
     }
 
     .name {
-      font-size: 250px;
+      font-size: 1em;
     }
 
     #rod {
@@ -97,7 +97,7 @@
     }
 	
     main {
-      font-size: 14px;
+      font-size: 1em;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -113,27 +113,27 @@
         <td>Ячейка 5</td>
       </tr>
       <tr>
-        <td><button class="btn1" aria-label="Мелкий" onclick="changeFontSize('main','12px')">Орлиный глаз</button></td>
+        <td><button class="btn1" aria-label="Мелкий" onclick="changeFontSize('main','0.5em')">Орлиный глаз</button></td>
         <td><button type="button"
-            onclick="changeColor('#fff')">цвет 1</button></td>
+            onclick="changeColor('#fff')">Светлая тема</button></td>
         <td><button type="button"
-            onclick="changeFontFamily('main','fantasy')">шрифт 1</button</td>
+            onclick="changeFontFamily('main','fantasy')">fantasy шрифт</button</td>
       </tr>
       <tr>
         <td><button aria-label="Обычный" type="button" name="medium"
-            onclick="changeFontSize('main','15px')">Простой смертный</button></td>
+            onclick="changeFontSize('main','1em')">Простой смертный</button></td>
         <td><button type="button"
-            onclick="changeColor('#90EE90')">цвет 2</button></td>
+            onclick="changeColor('#90EE90')">Зелёная тема</button></td>
         <td><button type="button"
-            onclick="changeFontFamily('main','sans-serif')">шрифт 2</button</td>
+            onclick="changeFontFamily('main','sans-serif')">sans-serif шрифт</button</td>
       </tr>
       <tr>
         <td><button class="btn3" aria-label="Огромный" type="button" name="large"
-            onclick="changeFontSize('main','25px')">НИЧЕГО НЕ ВИЖУ, ПОМОГИТЕ!</button></td>
+            onclick="changeFontSize('main','2em')">НИЧЕГО НЕ ВИЖУ, ПОМОГИТЕ!</button></td>
         <td><button type="button"
-            onclick="changeColor('#000')">цвет 3</button></td>
+            onclick="changeColor('#000')">Тёмная тема</button></td>
         <td><button type="button"
-            onclick="changeFontFamily('main','cursive')">шрифт 3</button></td>
+            onclick="changeFontFamily('main','cursive')">cursive шрифт</button></td>
       </tr>
 
     </table>
@@ -288,7 +288,7 @@
       var sp = document.getElementById('main');
       obj.style.backgroundColor = color;
       sp.className = "";
-      sp.style.fontSize = '16px';
+      sp.style.fontSize = '1em';
       sp.style.fontWeight = "bold";
       if (color == '#000') {
         obj.style.color = '#fff';
